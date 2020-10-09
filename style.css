@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 360px;
+}
+
+header {
+    display: block;
+}
+
+a.logo {
+    display: inline-block;
+    font-size: 50px;
+    color: #0173fb;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav {
+    display: inline-block;
+}
+
+.loanDetails {
+    background: #f8f8f8;
+    display: flex;
+}
+
+.cardBlk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardItm {
+    display: flex;
+    padding: 10px;
+}
+
+@media(min-width:1240px) {
+    .container {
+        max-width: 1140px;
+    }
+    .cardItm {
+        width: 24%;
+    }
+}
+
+@media(min-width:1920px) {
+    .container {
+        max-width: 1820px;
+    }
+    .cardItm {
+        width: 33%;
+    }
+}
+
+.card {
+    background: #f8f8f8;
+    color: #2a2b2d;
+    border-radius: 10px;
+    padding: 15px 15px 30px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.card .info, .card .checked {
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+}
+
+.card .info {
+    background: url(assets/exclamation.png) no-repeat 0 0;
+}
+
+.card .checked {
+    background: url(assets/checked\ active.png) no-repeat 0 0;
+}
+
+.card img {
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    margin: 25px auto;
+}
+
+.card.selected, .card:hover {
+    background: #0173fb;
+    color: #fff;
+}
+
+.card:hover .info, .card.selected .info {
+    background-image: url(assets/exclamation\ white.png);
+}
+
+.card:hover .checked, .card.selected .checked {
+    background-image: url(assets/checked\ inactive.png);
+}
+
+.btnBlk {
+    text-align: center;
+    display: block
+}
+
+.btn {
+    background: #0173fb;
+    border-radius: 25px;
+    padding: 10px 25px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #0173fb;
+    margin: 10px auto;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.btn:disabled {
+    background: #9ac5fb;
+    border-color: #9ac5fb;
+    cursor: default;
+}
